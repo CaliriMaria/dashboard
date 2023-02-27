@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--style-->
+    <link rel="stylesheet" href="style.css">
+    <!--tailwind-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&family=Overpass:wght@300;600&family=Roboto:ital,wght@1,300;1,700&family=Ubuntu:wght@400;500;700&display=swap"
+          rel="stylesheet">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+          integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+<div class="container">
+    <nav>
+        <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar"
+                type="button"
+                class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+            <span class="sr-only">Open sidebar</span>
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd" fill-rule="evenodd"
+                      d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+            </svg>
+        </button>
+
+        <aside id="logo-sidebar"
+               class="fixed top-0 left-0 z-40 w-48 h-screen transition-transform -translate-x-full sm:translate-x-0"
+               aria-label="Sidebar">
+            <div class="h-full px-3 py-4 overflow-y-auto ">
+                <a href="https://flowbite.com/" class="flex items-center pl-2.5 mb-5">
+                    <img src="img/image_winky2.png" class="h-6 mr-3 sm:h-7 text-white" alt="Flowbite Logo"/>
+                    <span class="self-center text-md  font-semibold whitespace-nowrap text-white"> ADMIN 1</span>
+                </a>
+                <ul class="space-y-2">
+                    <li>
+                        <div class="border-t border-slate-300 border-b border-slate-300">
+                            <a href="#" class="flex items-center p-2 text-base font-small text-gray-900 rounded-lg ">
+                                <svg aria-hidden="true" class="w-6 h-6 text-gray-400  " fill="currentColor"
+                                     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
+                                    <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
+                                </svg>
+                                <span class="ml-3 text-slate-300 text-slate-300 hover:text-white text-style">Dashboard</span>
+                            </a>
+                        </div>
+                    </li>
+                    <div class="border-b border-slate-300 mt-5 pb-3">
+                        <li> <p class="text-slate-400  item-start uppercase text-medium title-nav">INTERFACE</p> </li>
+                        <li>
+                               <span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white p-2"><i class="fa-solid fa-gear"></i></span>
+                                <button class="  whitespace-nowrap text-slate-300 hover:text-white p-2 text-style collapsible">Components</button>
+                                <div class="content bg-white divide-y divide-gray-100 rounded-lg shadow w-40 dark:bg-gray-700 ">
+                                   <ul class="py-2 text-sm text-gray-700 dark:text-gray-200">
+                                       <li class="font-small text-slate-400 uppercase px-2 py-2 ">custom components</li>
+                                       <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Buttons</li>
+                                       <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Cards</li>
+                                   </ul>
+                                </div>
+
+                        </li>
+
+                        <li>
+
+                            <span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white p-2">
+                                <i class="fa-solid fa-wrench"></i></span>
+                            <button type="button" class=" p-2 whitespace-nowrap text-slate-300 hover:text-white text-style collapsible">Utilities</button>
+                            <div class="content bg-white divide-y divide-gray-100 rounded-lg shadow w-40 dark:bg-gray-700">
+                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200">
+                                    <li class="font-small text-slate-400 uppercase px-2 py-2">custom utilities</li>
+                                    <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Colors</li>
+                                    <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Borders</li>
+                                    <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Animations</li>
+                                    <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Other</li>
+                                </ul>
+                            </div>
+
+                        </li>
+                    </div>
+                    <li>
+                        <span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white p-2">
+                                <i class="fa-solid fa-wrench"></i></span>
+                        <button type="button" class=" p-2 whitespace-nowrap text-slate-300 hover:text-white text-style collapsible">Pages</button>
+                        <div class="content bg-white divide-y divide-gray-100 rounded-lg shadow w-40 dark:bg-gray-700">
+                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200">
+                                <li class=" px-2 py-2 font-small text-slate-400 uppercase">Login screen</li>
+                                <li class=" px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Login</li>
+                                <li class=" px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Register</li>
+                                <li class=" px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Forgot password</li>
+                                <li class=" font-small text-slate-400 uppercase px-4 py-2">Other pages</li>
+                                <li class=" px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">404 Page</li>
+                                <li class=" px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Blank Page</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg ">
+                            <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-slate-300 hover:text-white"
+                                 fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z"></path>
+                                <path d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path>
+                            </svg>
+                            <span class="flex-1 ml-3 whitespace-nowrap text-slate-300 hover:text-white">Charts</span>
+                            <span class="inline-flex items-center justify-center w-3 h-3 p-3 ml-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">3</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <svg aria-hidden="true"
+                                 class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                 fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                                      clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="flex-1 ml-3 whitespace-nowrap">Tables</span>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </aside>
+    </nav>
+
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
