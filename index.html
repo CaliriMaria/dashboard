@@ -10,7 +10,9 @@
     <!--google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&family=Overpass:wght@300;600&family=Roboto:ital,wght@1,300;1,700&family=Ubuntu:wght@400;500;700&display=swap"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;500;700&family=Roboto:ital,wght@0,300;0,500;1,700&display=swap"
           rel="stylesheet">
     <!--font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -18,7 +20,8 @@
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
-<div class="container">
+<div class="grid grid-cols-3">
+    <div class="w-48">
     <nav>
         <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar"
                 type="button"
@@ -32,7 +35,7 @@
         </button>
 
         <aside id="logo-sidebar"
-               class="fixed top-0 left-0 z-40 w-48 h-screen transition-transform -translate-x-full sm:translate-x-0"
+               class="fixed top-0 left-0 z-40  h-screen transition-transform -translate-x-full sm:translate-x-0"
                aria-label="Sidebar">
             <div class="h-full px-3 py-4 overflow-y-auto ">
                 <a href="https://flowbite.com/" class="flex items-center pl-2.5 mb-5">
@@ -40,95 +43,146 @@
                     <span class="self-center text-md  font-semibold whitespace-nowrap text-white"> ADMIN 1</span>
                 </a>
                 <ul class="space-y-2">
-                    <li>
-                        <div class="border-t border-slate-300 border-b border-slate-300">
+                    <li class="hover:text-white">
+                        <div class="border-t border-gray-50 border-b border-gray-300 pb-5 pt-5">
                             <a href="#" class="flex items-center p-2 text-base font-small text-gray-900 rounded-lg ">
                                 <svg aria-hidden="true" class="w-6 h-6 text-gray-400  " fill="currentColor"
                                      viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
                                     <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
                                 </svg>
-                                <span class="ml-3 text-slate-300 text-slate-300 hover:text-white text-style">Dashboard</span>
+                                <span class="ml-3 text-slate-300 text-slate-300 font-bold text-style hover:text-white">Dashboard</span>
                             </a>
                         </div>
                     </li>
-                    <div class="border-b border-slate-300 mt-5 pb-3">
-                        <li> <p class="text-slate-400  item-start uppercase text-medium title-nav">INTERFACE</p> </li>
+                    <div class="border-b border-slate-300 mt-5 pb-5 pt-5">
+                        <li><p class="text-slate-400  item-start uppercase text-medium title-nav mb-2 hover:text-white">
+                            INTERFACE</p></li>
                         <li>
-                               <span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white p-2"><i class="fa-solid fa-gear"></i></span>
-                                <button class="  whitespace-nowrap text-slate-300 hover:text-white p-2 text-style collapsible">Components</button>
-                                <div class="content bg-white divide-y divide-gray-100 rounded-lg shadow w-40 dark:bg-gray-700 ">
-                                   <ul class="py-2 text-sm text-gray-700 dark:text-gray-200">
-                                       <li class="font-small text-slate-400 uppercase px-2 py-2 ">custom components</li>
-                                       <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Buttons</li>
-                                       <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Cards</li>
-                                   </ul>
-                                </div>
 
+                            <button  class="  whitespace-nowrap text-slate-300 hover:text-white p-2 text-style collapsible font-bold"><span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white mr-3"><i
+                                    class="fa-solid fa-gear"></i></span>
+                                Components <span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white p-2 ml-6"><i
+                                    class="fa-solid fa-chevron-right"></i></span></button>
+
+                            <div class="content bg-white divide-y divide-gray-100 rounded-lg shadow w-40 dark:bg-gray-700 ">
+                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200">
+                                    <li class="font-small text-slate-400 uppercase px-2 py-2 font-bold">Custom
+                                        Components
+                                    </li>
+                                    <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white font-medium">
+                                        Buttons
+                                    </li>
+                                    <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white font-medium">
+                                        Cards
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
 
                         <li>
 
-                            <span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white p-2">
+                            <button type="button"
+                                    class=" p-2 whitespace-nowrap text-slate-300 hover:text-white text-style collapsible font-bold mt-2">
+                                 <span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white mr-3">
                                 <i class="fa-solid fa-wrench"></i></span>
-                            <button type="button" class=" p-2 whitespace-nowrap text-slate-300 hover:text-white text-style collapsible">Utilities</button>
+                                Utilities <span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white p-2 ml-14"><i
+                                    class="fa-solid fa-chevron-right"></i></span>
+                            </button>
                             <div class="content bg-white divide-y divide-gray-100 rounded-lg shadow w-40 dark:bg-gray-700">
                                 <ul class="py-2 text-sm text-gray-700 dark:text-gray-200">
-                                    <li class="font-small text-slate-400 uppercase px-2 py-2">custom utilities</li>
-                                    <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Colors</li>
-                                    <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Borders</li>
-                                    <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Animations</li>
-                                    <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Other</li>
+                                    <li class="font-small text-slate-400 uppercase px-2 py-2 font-bold">Custom
+                                        Utilities
+                                    </li>
+                                    <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white font-medium">
+                                        Colors
+                                    </li>
+                                    <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white font-medium">
+                                        Borders
+                                    </li>
+                                    <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white font-medium">
+                                        Animations
+                                    </li>
+                                    <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white font-medium">
+                                        Other
+                                    </li>
                                 </ul>
                             </div>
 
                         </li>
                     </div>
                     <li>
-                        <span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white p-2">
-                                <i class="fa-solid fa-wrench"></i></span>
-                        <button type="button" class=" p-2 whitespace-nowrap text-slate-300 hover:text-white text-style collapsible">Pages</button>
-                        <div class="content bg-white divide-y divide-gray-100 rounded-lg shadow w-40 dark:bg-gray-700">
+                    <li><p class="text-slate-400  item-start uppercase text-medium title-nav mb-2 hover:text-white">
+                        ADDONS</p></li>
+                    <li>
+                        <button type="button"
+                                class=" p-2 whitespace-nowrap text-slate-300 hover:text-white text-style collapsible font-bold"><span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white mr-3">
+                               <i class="fa-solid fa-folder"></i></span>
+                            Pages  <span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white ml-16 "><i
+                                    class="fa-solid fa-chevron-right"></i></span>
+                        </button>
+                        <div class="content bg-white divide-y divide-gray-100 rounded-lg shadow w-40 dark:bg-gray-700 m-2 mb-2 p-2">
                             <ul class="py-2 text-sm text-gray-700 dark:text-gray-200">
-                                <li class=" px-2 py-2 font-small text-slate-400 uppercase">Login screen</li>
-                                <li class=" px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Login</li>
-                                <li class=" px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Register</li>
-                                <li class=" px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Forgot password</li>
-                                <li class=" font-small text-slate-400 uppercase px-4 py-2">Other pages</li>
-                                <li class=" px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">404 Page</li>
-                                <li class=" px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Blank Page</li>
+                                <li class=" px-2 py-2 font-bold text-slate-400 uppercase">Login screen</li>
+                                <li class=" px-2 py-2 hover:bg-gray-100 font-medium dark:hover:bg-gray-600 dark:hover:text-white">
+                                    Login
+                                </li>
+                                <li class=" px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    Register
+                                </li>
+                                <li class=" px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    Forgot password
+                                </li>
+                                <li class=" px-2 py-2 font-bold text-slate-400 uppercase">Other pages</li>
+                                <li class=" px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    404 Page
+                                </li>
+                                <li class=" px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    Blank Page
+                                </li>
                             </ul>
                         </div>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg ">
-                            <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-slate-300 hover:text-white"
-                                 fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z"></path>
-                                <path d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path>
-                            </svg>
-                            <span class="flex-1 ml-3 whitespace-nowrap text-slate-300 hover:text-white">Charts</span>
-                            <span class="inline-flex items-center justify-center w-3 h-3 p-3 ml-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">3</span>
-                        </a>
+
+                        <span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white p-2"><i
+                                class="fa-solid fa-chart-line"></i></span>
+                        <span class="p-2 whitespace-nowrap text-slate-300 hover:text-white text-style collapsible font-bold mt-2">Charts</span>
+                        <!--                            <span class="inline-flex items-center justify-center w-3 h-3 p-3 ml-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">3</span>-->
+
                     </li>
                     <li>
-                        <a href="#"
-                           class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                            <svg aria-hidden="true"
-                                 class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                 fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                                      clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="flex-1 ml-3 whitespace-nowrap">Tables</span>
+                        <a href="#">
+                        <span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white p-2">
+                               <i class="fa-solid fa-table"></i></span>
+                            <button type="button"
+                                    class=" p-2 whitespace-nowrap text-slate-300 hover:text-white text-style collapsible font-bold">
+                                Tables
+                            </button>
                         </a>
                     </li>
-
-
                 </ul>
             </div>
         </aside>
     </nav>
+    </div>
+    <div class=" bg-white">
+
+        <form class="flex items-center">
+            <label for="simple-search" class="sr-only">Search</label>
+            <div class="relative w-full">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                </div>
+                <input type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search" required>
+            </div>
+            <button type="submit" class="p-2.5 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                <span class="sr-only">Search</span>
+            </button>
+        </form>
+
+    </div>
 
 
 </div>
