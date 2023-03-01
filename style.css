@@ -80,3 +80,70 @@ ul li{
 .content{
     display: none;
 }
+
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media only screen and (min-width: 240px) and (max-width: 480px) {
+    #content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media only screen and (min-width: 240px) and (max-width: 480px) {
+    #header{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+@media only screen and (min-width: 240px) and (max-width: 480px) {
+    #form{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 240px) and (max-width: 480px) {
+   #button-generate{
+       display: none;
+   }
+}
+@media only screen and (min-width: 240px) and (max-width: 480px) {
+    #avatar{
+        position: absolute;
+        top: 8px;
+        right: 0;
+    }
+}
+@media only screen and (min-width: 240px) and (max-width: 480px) {
+    #main-content{
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+}
+
+@media only screen and (min-width: 240px) and (max-width: 480px) {
+    #tables{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+@media only screen and (min-width: 240px) and (max-width: 480px) {
+    #section{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+

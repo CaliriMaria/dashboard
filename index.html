@@ -20,172 +20,635 @@
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
-<div class="grid grid-cols-3">
-    <div class="w-48">
-    <nav>
-        <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar"
-                type="button"
-                class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-            <span class="sr-only">Open sidebar</span>
-            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-                 xmlns="http://www.w3.org/2000/svg">
-                <path clip-rule="evenodd" fill-rule="evenodd"
-                      d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
-            </svg>
-        </button>
 
-        <aside id="logo-sidebar"
-               class="fixed top-0 left-0 z-40  h-screen transition-transform -translate-x-full sm:translate-x-0"
-               aria-label="Sidebar">
-            <div class="h-full px-3 py-4 overflow-y-auto ">
-                <a href="https://flowbite.com/" class="flex items-center pl-2.5 mb-5">
-                    <img src="img/image_winky2.png" class="h-6 mr-3 sm:h-7 text-white" alt="Flowbite Logo"/>
-                    <span class="self-center text-md  font-semibold whitespace-nowrap text-white"> ADMIN 1</span>
-                </a>
-                <ul class="space-y-2">
-                    <li class="hover:text-white">
-                        <div class="border-t border-gray-50 border-b border-gray-300 pb-5 pt-5">
-                            <a href="#" class="flex items-center p-2 text-base font-small text-gray-900 rounded-lg ">
-                                <svg aria-hidden="true" class="w-6 h-6 text-gray-400  " fill="currentColor"
-                                     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
-                                    <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
-                                </svg>
-                                <span class="ml-3 text-slate-300 text-slate-300 font-bold text-style hover:text-white">Dashboard</span>
-                            </a>
-                        </div>
-                    </li>
-                    <div class="border-b border-slate-300 mt-5 pb-5 pt-5">
-                        <li><p class="text-slate-400  item-start uppercase text-medium title-nav mb-2 hover:text-white">
-                            INTERFACE</p></li>
-                        <li>
+<button data-drawer-target="sidebar-multi-level-sidebar" data-drawer-toggle="sidebar-multi-level-sidebar"
+        aria-controls="sidebar-multi-level-sidebar" type="button"
+        class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+    <span class="sr-only">Open sidebar</span>
+    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path clip-rule="evenodd" fill-rule="evenodd"
+              d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+    </svg>
+</button>
 
-                            <button  class="  whitespace-nowrap text-slate-300 hover:text-white p-2 text-style collapsible font-bold"><span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white mr-3"><i
-                                    class="fa-solid fa-gear"></i></span>
-                                Components <span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white p-2 ml-6"><i
-                                    class="fa-solid fa-chevron-right"></i></span></button>
+<aside id="sidebar-multi-level-sidebar"
+       class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+       aria-label="Sidebar">
+    <div class="h-full px-3 py-4 overflow-y-auto ">
+        <a href="https://flowbite.com/" class="flex items-center pl-2.5 mb-5">
+            <img src="img/image_winky2.png" class="h-6 mr-3 sm:h-7 text-white" alt="Flowbite Logo"/>
+            <span class="self-center text-md  font-semibold whitespace-nowrap text-white"> ADMIN 1</span>
+        </a>
+        <ul class="space-y-2">
+            <li class="hover:text-white">
+                <div class="border-t border-gray-50 border-b border-gray-300 pb-5 pt-5">
+                    <a href="#" class="flex items-center p-2 text-base font-small text-gray-900 rounded-lg ">
+                        <svg aria-hidden="true" class="w-6 h-6 text-gray-400  " fill="currentColor"
+                             viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
+                            <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
+                        </svg>
+                        <span class="ml-3 text-slate-300 text-slate-300 font-bold text-style hover:text-white">Dashboard</span>
+                    </a>
+                </div>
+            </li>
+            <div class="border-b border-slate-300 mt-5 pb-5 pt-5">
+                <li><p class="text-slate-400  item-start uppercase text-medium title-nav mb-2">
+                    INTERFACE</p></li>
+                <li>
 
-                            <div class="content bg-white divide-y divide-gray-100 rounded-lg shadow w-40 dark:bg-gray-700 ">
-                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200">
-                                    <li class="font-small text-slate-400 uppercase px-2 py-2 font-bold">Custom
-                                        Components
-                                    </li>
-                                    <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white font-medium">
-                                        Buttons
-                                    </li>
-                                    <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white font-medium">
-                                        Cards
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
+                    <button class="  whitespace-nowrap text-slate-300 hover:text-white p-2 text-style collapsible font-bold"><span
+                            class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white mr-3"><i
+                            class="fa-solid fa-gear"></i></span>
+                        Components <span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white p-2 ml-6"><i
+                                class="fa-solid fa-chevron-right"></i></span></button>
 
-                        <li>
-
-                            <button type="button"
-                                    class=" p-2 whitespace-nowrap text-slate-300 hover:text-white text-style collapsible font-bold mt-2">
-                                 <span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white mr-3">
-                                <i class="fa-solid fa-wrench"></i></span>
-                                Utilities <span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white p-2 ml-14"><i
-                                    class="fa-solid fa-chevron-right"></i></span>
-                            </button>
-                            <div class="content bg-white divide-y divide-gray-100 rounded-lg shadow w-40 dark:bg-gray-700">
-                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200">
-                                    <li class="font-small text-slate-400 uppercase px-2 py-2 font-bold">Custom
-                                        Utilities
-                                    </li>
-                                    <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white font-medium">
-                                        Colors
-                                    </li>
-                                    <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white font-medium">
-                                        Borders
-                                    </li>
-                                    <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white font-medium">
-                                        Animations
-                                    </li>
-                                    <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white font-medium">
-                                        Other
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </li>
+                    <div class="content bg-white divide-y divide-gray-100 rounded-lg shadow w-40 dark:bg-gray-700 ">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200">
+                            <li class="font-small text-slate-400 uppercase px-2 py-2 font-bold">Custom
+                                Components
+                            </li>
+                            <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white font-medium">
+                                Buttons
+                            </li>
+                            <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white font-medium">
+                                Cards
+                            </li>
+                        </ul>
                     </div>
+                </li>
+
+                <li>
+
+                    <button type="button"
+                            class=" p-2 whitespace-nowrap text-slate-300 hover:text-white text-style collapsible font-bold mt-2">
+                                         <span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white mr-3">
+                                        <i class="fa-solid fa-wrench"></i></span>
+                        Utilities <span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white p-2 ml-14"><i
+                            class="fa-solid fa-chevron-right"></i></span>
+                    </button>
+                    <div class="content bg-white divide-y divide-gray-100 rounded-lg shadow w-40 dark:bg-gray-700">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200">
+                            <li class="font-small text-slate-400 uppercase px-2 py-2 font-bold">Custom
+                                Utilities
+                            </li>
+                            <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white font-medium">
+                                Colors
+                            </li>
+                            <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white font-medium">
+                                Borders
+                            </li>
+                            <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white font-medium">
+                                Animations
+                            </li>
+                            <li class=" px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white font-medium">
+                                Other
+                            </li>
+                        </ul>
+                    </div>
+
+                </li>
+            </div>
+            <li>
+            <li><p class="text-slate-400  item-start uppercase text-medium title-nav mb-2 ">
+                ADDONS</p></li>
+            <li>
+                <button type="button"
+                        class=" p-2 whitespace-nowrap text-slate-300 hover:text-white text-style collapsible font-bold"><span
+                        class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white mr-3">
+                                       <i class="fa-solid fa-folder"></i></span>
+                    Pages <span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white ml-16 "><i
+                            class="fa-solid fa-chevron-right"></i></span>
+                </button>
+                <div class="content bg-white divide-y divide-gray-100 rounded-lg shadow w-40 dark:bg-gray-700 m-2 mb-2 p-2">
+                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200">
+                        <li class=" px-2 py-2 font-bold text-slate-400 uppercase">Login screen</li>
+                        <li class=" px-2 py-2 hover:bg-gray-100 font-medium dark:hover:bg-gray-600 dark:hover:text-white">
+                            Login
+                        </li>
+                        <li class=" px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                            Register
+                        </li>
+                        <li class=" px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                            Forgot password
+                        </li>
+                        <li class=" px-2 py-2 font-bold text-slate-400 uppercase">Other pages</li>
+                        <li class=" px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                            404 Page
+                        </li>
+                        <li class=" px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                            Blank Page
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+
+                                <span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white p-2"><i
+                                        class="fa-solid fa-chart-line"></i></span>
+                <span class="p-2 whitespace-nowrap text-slate-300 hover:text-white text-style collapsible font-bold mt-2">Charts</span>
+                <!--                            <span class="inline-flex items-center justify-center w-3 h-3 p-3 ml-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">3</span>-->
+
+            </li>
+            <li>
+                <a href="#">
+                                <span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white p-2">
+                                       <i class="fa-solid fa-table"></i></span>
+                    <button type="button"
+                            class=" p-2 whitespace-nowrap text-slate-300 hover:text-white text-style collapsible font-bold">
+                        Tables
+                    </button>
+                </a>
+            </li>
+        </ul>
+    </div>
+</aside>
+
+<div class="sm:ml-64 mt-6">
+    <div id="header" class="grid grid-cols-2 mb-4 container">
+        <div class="bg-white">
+            <form id="form" class="flex items-center">
+                <label for="simple-search" class="sr-only">Search</label>
+                <div class="relative w-full">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor"
+                             viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                  d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                  clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <input type="text" id="simple-search"
+                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                           placeholder="Search" required>
+                </div>
+                <button type="submit"
+                        class="p-2.5 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <span class="sr-only">Search</span>
+                </button>
+            </form>
+        </div>
+
+        <div id="avatar" class="flex justify-end bg-white mr-5">
+            <!--Notifications-->
+            <button id="dropdownNotificationButton" data-dropdown-toggle="dropdownNotification"
+                    class="inline-flex items-center text-sm font-medium text-center text-gray-500 hover:text-gray-900 focus:outline-none dark:hover:text-white dark:text-gray-400"
+                    type="button">
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path>
+                </svg>
+                <div class="relative flex">
+                    <div class="relative inline-flex w-3 h-3 bg-red-500 border-2 border-white rounded-full -top-2 right-3 dark:border-gray-900"></div>
+                </div>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownNotification"
+                 class="z-20 hidden w-full max-w-sm bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-800 dark:divide-gray-700"
+                 aria-labelledby="dropdownNotificationButton">
+                <div class="block px-4 py-2 font-medium text-center text-gray-700 rounded-t-lg bg-gray-50 dark:bg-gray-800 dark:text-white">
+                    Notifications
+                </div>
+                <div class="divide-y divide-gray-100 dark:divide-gray-700">
+                    <a href="#" class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <div class="flex-shrink-0">
+                            <img class="rounded-full w-11 h-11" src="img/image-avatar.png" alt="Jese image">
+                            <div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 bg-blue-600 border border-white rounded-full dark:border-gray-800">
+                                <svg class="w-3 h-3 text-white" aria-hidden="true" fill="currentColor"
+                                     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z"></path>
+                                    <path d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="w-full pl-3">
+                            <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400">New message from <span
+                                    class="font-semibold text-gray-900 dark:text-white">Jese Leos</span>: "Hey, what's
+                                up? All set for the presentation?"
+                            </div>
+                            <div class="text-xs text-blue-600 dark:text-blue-500">a few moments ago</div>
+                        </div>
+                    </a>
+                    <a href="#" class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <div class="flex-shrink-0">
+                            <img class="rounded-full w-11 h-11" src="img/image-avatar.png" alt="Joseph image">
+                            <div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 bg-gray-900 border border-white rounded-full dark:border-gray-800">
+                                <svg class="w-3 h-3 text-white" aria-hidden="true" fill="currentColor"
+                                     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="w-full pl-3">
+                            <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400"><span
+                                    class="font-semibold text-gray-900 dark:text-white">Joseph Mcfall</span> and <span
+                                    class="font-medium text-gray-900 dark:text-white">5 others</span> started following
+                                you.
+                            </div>
+                            <div class="text-xs text-blue-600 dark:text-blue-500">10 minutes ago</div>
+                        </div>
+                    </a>
+                    <a href="#" class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <div class="flex-shrink-0">
+                            <img class="rounded-full w-11 h-11" src="img/image-avatar.png" alt="Bonnie image">
+                            <div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 bg-red-600 border border-white rounded-full dark:border-gray-800">
+                                <svg class="w-3 h-3 text-white" aria-hidden="true" fill="currentColor"
+                                     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                          d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                          clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="w-full pl-3">
+                            <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400"><span
+                                    class="font-semibold text-gray-900 dark:text-white">Bonnie Green</span> and <span
+                                    class="font-medium text-gray-900 dark:text-white">141 others</span> love your story.
+                                See it and view more stories.
+                            </div>
+                            <div class="text-xs text-blue-600 dark:text-blue-500">44 minutes ago</div>
+                        </div>
+                    </a>
+                    <a href="#" class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <div class="flex-shrink-0">
+                            <img class="rounded-full w-11 h-11" src="img/image-avatar.png" alt="Leslie image">
+                            <div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 bg-green-400 border border-white rounded-full dark:border-gray-800">
+                                <svg class="w-3 h-3 text-white" aria-hidden="true" fill="currentColor"
+                                     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                          d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z"
+                                          clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="w-full pl-3">
+                            <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400"><span
+                                    class="font-semibold text-gray-900 dark:text-white">Leslie Livingston</span>
+                                mentioned you in a comment: <span class="font-medium text-blue-500" href="#">@bonnie.green</span>
+                                what do you say?
+                            </div>
+                            <div class="text-xs text-blue-600 dark:text-blue-500">1 hour ago</div>
+                        </div>
+                    </a>
+                    <a href="#" class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <div class="flex-shrink-0">
+                            <img class="rounded-full w-11 h-11" src="img/image-avatar.png" alt="Robert image">
+                            <div class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 bg-purple-500 border border-white rounded-full dark:border-gray-800">
+                                <svg class="w-3 h-3 text-white" aria-hidden="true" fill="currentColor"
+                                     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="w-full pl-3">
+                            <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400"><span
+                                    class="font-semibold text-gray-900 dark:text-white">Robert Brown</span> posted a new
+                                video: Glassmorphism - learn how to implement the new design trend.
+                            </div>
+                            <div class="text-xs text-blue-600 dark:text-blue-500">3 hours ago</div>
+                        </div>
+                    </a>
+                </div>
+                <a href="#"
+                   class="block py-2 text-sm font-medium text-center text-gray-900 rounded-b-lg bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white">
+                    <div class="inline-flex items-center ">
+                        <svg class="w-4 h-4 mr-2 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                             fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                            <path fill-rule="evenodd"
+                                  d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                                  clip-rule="evenodd"></path>
+                        </svg>
+                        View all
+                    </div>
+                </a>
+            </div>
+
+
+            <button id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar"
+                    class="flex mx-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                    type="button">
+                <span class="sr-only">Open user menu</span>
+                <img class="w-10 h-10 rounded-full" src="img/image-avatar.png" alt="user photo">
+            </button>
+
+            <!-- Dropdown menu -->
+            <div id="dropdownAvatar"
+                 class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                    <div>Bonnie Green</div>
+                    <div class="font-medium truncate">name@flowbite.com</div>
+                </div>
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton">
                     <li>
-                    <li><p class="text-slate-400  item-start uppercase text-medium title-nav mb-2 hover:text-white">
-                        ADDONS</p></li>
+                        <a href="#"
+                           class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                    </li>
                     <li>
-                        <button type="button"
-                                class=" p-2 whitespace-nowrap text-slate-300 hover:text-white text-style collapsible font-bold"><span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white mr-3">
-                               <i class="fa-solid fa-folder"></i></span>
-                            Pages  <span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white ml-16 "><i
-                                    class="fa-solid fa-chevron-right"></i></span>
-                        </button>
-                        <div class="content bg-white divide-y divide-gray-100 rounded-lg shadow w-40 dark:bg-gray-700 m-2 mb-2 p-2">
-                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200">
-                                <li class=" px-2 py-2 font-bold text-slate-400 uppercase">Login screen</li>
-                                <li class=" px-2 py-2 hover:bg-gray-100 font-medium dark:hover:bg-gray-600 dark:hover:text-white">
-                                    Login
+                        <a href="#"
+                           class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                           class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                    </li>
+                </ul>
+                <div class="py-2">
+                    <a href="#"
+                       class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign
+                        out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="main-content" class="bg-gray-50 h-full">
+        <div class=" container grid grid-cols-2 gap-4 mb-4">
+            <div class="flex items-center h-16">
+                <p class="text-2xl text-gray-400 dark:text-gray-500">DASBOARD</p>
+            </div>
+            <div id="button-generate" class="flex items-center justify-end">
+                <button type="button"
+                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                    Generate Report
+                </button>
+            </div>
+        </div>
+
+
+        <!--cards-->
+        <div id="content" class=" container grid grid-cols-4 gap-4">
+
+            <a class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl dark:border-gray-700 dark:bg-gray-800 border-l-4 border-l-indigo-500">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        Earings(montly)</h5>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">$40,000</p>
+                </div>
+                <img class="w-10 h-10 ml-20" src="img/stock-earnings.svg">
+            </a>
+
+            <a class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl dark:border-gray-700 dark:bg-gray-800  border-l-4 border-l-green-500">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        Earings(annuali)</h5>
+                    <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">$215,000</p>
+                </div>
+                <svg class="w-10 h-10 mb-2 text-gray-500 dark:text-gray-400 ml-20" aria-hidden="true"
+                     fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                          d="M5 5a3 3 0 015-2.236A3 3 0 0114.83 6H16a2 2 0 110 4h-5V9a1 1 0 10-2 0v1H4a2 2 0 110-4h1.17C5.06 5.687 5 5.35 5 5zm4 1V5a1 1 0 10-1 1h1zm3 0a1 1 0 10-1-1v1h1z"
+                          clip-rule="evenodd"></path>
+                    <path d="M9 11H3v5a2 2 0 002 2h4v-7zM11 18h4a2 2 0 002-2v-5h-6v7z"></path>
+                </svg>
+            </a>
+            <a class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl dark:border-gray-700 dark:bg-gray-800  border-l-4 border-l-yellow-500">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                        Earings(annuali)</h5>
+                    <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">$215,000</p>
+                </div>
+                <svg class="w-10 h-10 mb-2 text-gray-500 dark:text-gray-400 ml-20" aria-hidden="true"
+                     fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                          d="M5 5a3 3 0 015-2.236A3 3 0 0114.83 6H16a2 2 0 110 4h-5V9a1 1 0 10-2 0v1H4a2 2 0 110-4h1.17C5.06 5.687 5 5.35 5 5zm4 1V5a1 1 0 10-1 1h1zm3 0a1 1 0 10-1-1v1h1z"
+                          clip-rule="evenodd"></path>
+                    <path d="M9 11H3v5a2 2 0 002 2h4v-7zM11 18h4a2 2 0 002-2v-5h-6v7z"></path>
+                </svg>
+            </a>
+            <a class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl dark:border-gray-700 dark:bg-gray-800  border-l-4 border-l-red-500">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                        Earings(annuali)</h5>
+                    <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">$215,000</p>
+                </div>
+                <svg class="w-10 h-10 mb-2 text-gray-500 dark:text-gray-400 ml-20" aria-hidden="true"
+                     fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                          d="M5 5a3 3 0 015-2.236A3 3 0 0114.83 6H16a2 2 0 110 4h-5V9a1 1 0 10-2 0v1H4a2 2 0 110-4h1.17C5.06 5.687 5 5.35 5 5zm4 1V5a1 1 0 10-1 1h1zm3 0a1 1 0 10-1-1v1h1z"
+                          clip-rule="evenodd"></path>
+                    <path d="M9 11H3v5a2 2 0 002 2h4v-7zM11 18h4a2 2 0 002-2v-5h-6v7z"></path>
+                </svg>
+            </a>
+        </div>
+
+        <div class="container">
+            <div id="tables" class="grid grid-cols-2 gap-4">
+                <div class="w-full mt-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-80 ">
+                    <ul class=" w-full mb-2 flex flex-wrap text-md font-bold text-center text-gray-500 border-b border-gray-200 rounded-t-lg bg-gray-50 dark:border-gray-700">
+                        <li class="">
+                            <p class="inline-block p-4 text-blue-600 rounded-tl-lg dark:text-blue-500">Projects</p>
+                        </li>
+                    </ul>
+                    <div class="mr-6 ml-6 mb-6">
+                        <dl>
+                            <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Server Migration</dt>
+                            <dd class="flex items-center mb-3">
+                                <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
+                                    <div class="bg-green-600 h-2.5 rounded dark:bg-green-500" style="width: 88%"></div>
+                                </div>
+                                <span class="text-sm font-medium text-gray-500 dark:text-gray-400">8.8</span>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Sales Tracking</dt>
+                            <dd class="flex items-center mb-3">
+                                <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
+                                    <div class="bg-blue-600 h-2.5 rounded dark:bg-blue-500" style="width: 89%"></div>
+                                </div>
+                                <span class="text-sm font-medium text-gray-500 dark:text-gray-400">8.9</span>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Customer database</dt>
+                            <dd class="flex items-center mb-3">
+                                <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
+                                    <div class="bg-yellow-600 h-2.5 rounded dark:bg-yellow-500"
+                                         style="width: 88%"></div>
+                                </div>
+                                <span class="text-sm font-medium text-gray-500 dark:text-gray-400">8.8</span>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Account Setup</dt>
+                            <dd class="flex items-center">
+                                <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
+                                    <div class="bg-red-600 h-2.5 rounded dark:bg-red-500" style="width: 54%"></div>
+                                </div>
+                                <span class="text-sm font-medium text-gray-500 dark:text-gray-400">5.4</span>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="w-full mt-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-80 ">
+                    <ul class=" w-full mb-2 flex flex-wrap text-md font-bold text-center text-gray-500 border-b border-gray-200 rounded-t-lg bg-gray-50 dark:border-gray-700">
+                        <li class="">
+                            <p class="inline-block p-4 text-blue-600 rounded-tl-lg dark:text-blue-500">Stato
+                                Avanzamenti</p>
+                        </li>
+                    </ul>
+                    <div class="flex justify-center">
+                        <img class="w-96" src="img/chart.png">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div id="section" class="grid grid-cols-2 gap-4 mb-4 justify-items-center mt-5">
+                    <div class="w-full  p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+                        <div class="flex items-center justify-between mb-4">
+                            <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Prossime
+                                scadenze</h5>
+                        </div>
+                        <div class="flow-root">
+                            <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
+                                <li class="py-3 sm:py-4">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="flex-shrink-0">
+                                            <img class="w-12 h-10 rounded-full" src="img/doumbell.png"
+                                                 alt="Bonnie image">
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                                Zumba
+                                            </p>
+
+                                        </div>
+                                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                            <span class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">25/02/23</span>
+                                        </div>
+                                    </div>
                                 </li>
-                                <li class=" px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                    Register
+                                <li class="py-3 sm:py-4">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="flex-shrink-0">
+                                            <img class="w-12 h-10 rounded-full" src="img/doumbell.png"
+                                                 alt="Michael image">
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                                Funzionale
+                                            </p>
+
+                                        </div>
+                                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                            <span class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">27/02/23</span>
+                                        </div>
+                                    </div>
                                 </li>
-                                <li class=" px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                    Forgot password
-                                </li>
-                                <li class=" px-2 py-2 font-bold text-slate-400 uppercase">Other pages</li>
-                                <li class=" px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                    404 Page
-                                </li>
-                                <li class=" px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                    Blank Page
+                                <li class="py-3 sm:py-4">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="flex-shrink-0">
+                                            <img class="w-12 h-10 rounded-full" src="img/doumbell.png" alt="Lana image">
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                                Pilates
+                                            </p>
+
+                                        </div>
+                                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                            <span class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">28/02/23</span>
+                                        </div>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
-                    </li>
-                    <li>
+                    </div>
 
-                        <span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white p-2"><i
-                                class="fa-solid fa-chart-line"></i></span>
-                        <span class="p-2 whitespace-nowrap text-slate-300 hover:text-white text-style collapsible font-bold mt-2">Charts</span>
-                        <!--                            <span class="inline-flex items-center justify-center w-3 h-3 p-3 ml-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">3</span>-->
+                    <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+                        <div class="flex items-center justify-between mb-4">
+                            <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Abbonamenti</h5>
+                        </div>
+                        <div class="flow-root">
+                            <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
+                                <li class="py-3 sm:py-4">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="flex-shrink-0">
+                                            <img class="w-8 h-8 rounded-full" src="img/membership.png"
+                                                 alt="Bonnie image">
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                                GOLD
+                                            </p>
 
-                    </li>
-                    <li>
-                        <a href="#">
-                        <span class=" flex-shrink-0 w-6 h-6 text-slate-400 hover:text-white p-2">
-                               <i class="fa-solid fa-table"></i></span>
-                            <button type="button"
-                                    class=" p-2 whitespace-nowrap text-slate-300 hover:text-white text-style collapsible font-bold">
-                                Tables
-                            </button>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </aside>
-    </nav>
-    </div>
-    <div class=" bg-white">
+                                        </div>
+                                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                            <span class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">$399</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="py-3 sm:py-4">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="flex-shrink-0">
+                                            <img class="w-8 h-8 rounded-full" src="img/membership.png"
+                                                 alt="Michael image">
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                                SILVER
+                                            </p>
 
-        <form class="flex items-center">
-            <label for="simple-search" class="sr-only">Search</label>
-            <div class="relative w-full">
-                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                                        </div>
+                                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                            <span class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">$499</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="py-3 sm:py-4">
+                                    <div class="flex items-center space-x-4">
+                                        <div class="flex-shrink-0">
+                                            <img class="w-8 h-8 rounded-full" src="img/membership.png" alt="Lana image">
+                                        </div>
+                                        <div class="flex-1 min-w-0">
+                                            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                                BRONZE
+                                            </p>
+
+                                        </div>
+                                        <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                            <span class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">$299</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
-                <input type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search" required>
             </div>
-            <button type="submit" class="p-2.5 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                <span class="sr-only">Search</span>
-            </button>
-        </form>
+            <div class="container">
+                <footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/"
+                                                                                    class="hover:underline">Flowbite™</a>. All Rights Reserved.
+    </span>
+                    <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+                        <li>
+                            <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+                        </li>
+                        <li>
+                            <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="mr-4 hover:underline md:mr-6">Licensing</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:underline">Contact</a>
+                        </li>
+                    </ul>
+                </footer>
 
+
+            </div>
+        </div>
     </div>
 
 
-</div>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
